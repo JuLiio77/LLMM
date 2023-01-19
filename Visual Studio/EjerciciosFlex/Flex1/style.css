@@ -1,0 +1,41 @@
+
+.container{
+    width: 80%;
+    margin: 20px auto;
+}
+
+header{
+    display: flex;
+    height: 400px;
+    background-color: rgb(153, 153, 153);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+header div{
+    background-color: aqua;
+    border: solid 2px black;
+    width: 200px;
+    padding: 1em;
+    height: 100px;
+}
+
+main{
+    background-color: rgb(153, 153, 153);
+    display: flex;
+    height: 400px;
+    margin-top: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main div{
+    background-color: burlywood;
+    height: 50px;
+    width: 30%;
+    border: 1px solid black;
+
+}

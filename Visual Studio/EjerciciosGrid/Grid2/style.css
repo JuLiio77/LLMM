@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: [uno] 100px [dos] 100px [tres] 100px [cuatro];
+    margin:20px auto;
+    width: 60%;
+}
+
+
+#azul{
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: uno;
+    grid-row-end: cuatro;
+    color: white;
+
+}
+
+#rojo{
+    background-color: red;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: uno;
+    grid-row-end: dos;
+}
+
+#amarillo{
+    background-color: yellow;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start:  dos;
+    grid-row-end: cuatro;
+    
+}
+
+
+.main{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 30% 20% 20% 30%;
+    grid-template-rows: 100px 100px 100px;
+    margin: 20px auto;
+    background-color: gray;
+
+}
+
+.main div:nth-child(1){
+    background-color: blue;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    color: white;
+
+}
+
+.main div:nth-child(2){
+    background-color: beige;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.main div:nth-child(3){
+    background-color: brown;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.main div:nth-child(4){
+    background-color: green;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.main div:nth-child(5){
+    background-color: black;
+    grid-column: 4 / 5;
+    grid-row: 1 / 4;
+    color: white;
+}
+

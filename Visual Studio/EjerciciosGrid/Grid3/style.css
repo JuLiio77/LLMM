@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    width: 80%;
+    background-color: darkgray;
+    margin: 20px auto;
+    height: 600px;
+    grid-template-columns: 20% 20% 20%;
+    grid-template-rows: repeat(3, 20%);
+    padding: 1em; /*espacio para darle sobre con el limite del espacio */
+    justify-content:start;/* */ 
+    align-content: space-evenly; /* para que este centrado*/
+    grid-column-gap: 10px ; /*meterle separacion */
+    
+
+}
+
+.container div{
+    background-color: beige;
+    border: 2px solid black;
+    
+}

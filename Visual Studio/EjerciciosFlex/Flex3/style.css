@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+img{
+    float: left;
+}
+
+@media screen and (min-width: 400px) and (max-width:800px) {
+    body{
+        background-color: darkred;
+        color:white;
+        font-family:'Courier New', Courier, monospace;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width:1199px){
+    body{
+        background-color: orangered;
+        color:greenyellow;
+        font-family:'Courier New', Courier, monospace;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+        background-color: aquamarine;
+        color: darkred;
+        font-family:'Courier New', Courier, monospace;
+    }
+}

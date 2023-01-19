@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    font-family:'Lobster';
+    color: #666;
+    font-size: 1em;
+}
+/*Header*/
+header{
+    border-bottom: 2px solid #666;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    justify-content: center; 
+}
+
+/*Main*/
+
+.menu{
+    margin: 1% 0% 2% 2%;
+    display: flex;
+    flex-direction: row;
+}
+nav ul{
+    margin-top: 1%;
+    margin-left: 3%;
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    flex-direction: column;
+}
+nav li{
+    list-style: none;
+    margin-bottom: 15%;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+/*Cuerpo*/
+
+section > img{
+    display: inline-block;
+    width: 25em;
+    border-radius: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.caja{
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+    justify-content: space-around;
+    border: 2px solid #666;
+    border-radius: 15px;
+    width: 40%;    
+    padding: 1% 0.5% 5%;
+    margin-bottom: 1%;
+    text-align: center;  
+}
+
+
+.caja2{
+    display: flex;
+    flex-direction: row;
+    display:inline-block;
+    border: 2px solid #666;
+    border-radius: 15px;    
+    padding: 1% 1% 5%;
+    margin-bottom: 1%;   
+    margin-right: 1%; 
+}
+
+.caja3{
+    display: flex;
+    flex-direction: row;
+    display:inline-block;
+    border: 2px solid #666;
+    border-radius: 15px;    
+    padding: 1% 1% 5%;
+    margin-bottom: 1%;   
+    margin-right: 1%; 
+}
+
+.caja4{
+    display: flex;
+    flex-direction: row;
+    display:inline-block;
+    border: 2px solid #666;
+    border-radius: 15px;    
+    padding: 1% 1% 5%;
+    margin-bottom: 1%;   
+    margin-right: 1%; 
+}
+
+.caja5{
+    display: flex;
+    flex-direction: row;
+    display:inline-block;
+    border: 2px solid #666;
+    border-radius: 15px;    
+    padding: 1% 1% 5%;
+    margin-bottom: 1%;   
+    margin-right: 1%; 
+}
+
+
+/*Footer*/
+
+.footer{
+    border-top:solid #666 2px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+li{
+    display: inline-block;
+    list-style: none;
+}
