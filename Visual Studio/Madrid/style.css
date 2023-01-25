@@ -7,6 +7,22 @@ header{
     text-align: center  ;
 }
 
+.container {
+display: grid;
+grid-template-rows: 50px 50px;
+grid-template-columns: 200px 100px;
+}
+
+.item1 {
+grid-row: 1 / 2;
+grid-column: 1 / 2;
+}
+
+.item2 {
+grid-row: 1 / 2;
+grid-column: 2 / 3;
+}
+
 footer{
     border-bottom: 2px solid #666;
     margin-left: 4%;
