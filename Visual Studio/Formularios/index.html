@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <form>
+        <fieldset>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            Nombre
+            <input type="text"/>
+
+            Apellidos
+            <input type="text"size="50" /><br>
+
+            Edad
+            <input type="text" size="2">
+
+            Sexo:  
+            <input type="radio" name="gender" value="male" > Mujer
+            <input type="radio" name="gender" value="female"> Hombre
+         
+         
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+                Email
+                <input type="email"/>
+    
+                Dirección
+                <input type="text"size="75" /><br>
+    
+                Codigo Postal
+                <input type="text" size="5">
+
+                Ciudad
+                <input type="text" size="10">
+
+                Provincia
+                <select name="Provincia">
+                    <option value="">Jaén</option>
+                    <option value="">Córdoba</option>
+                    <option value="">Granada</option>
+                    <option value="">Malaga</option>
+                    <option value="">Sevilla</option>
+                    <option value="">Huelva</option>
+                    <option value="">Cadiz</option>
+                    <option value="">Almeria</option>
+                </select>
+    
+                Clave
+                <input type="text" size="8">
+
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Datos de Reserva</legend>
+                Fecha
+                <input type="date"/>
+    
+                Hora
+                <input type="time"/>
+    
+        
+                Habitación
+                <select name="Habitación">
+                    <option value="individual">Individual</option>
+                    <option value="dobles">Dobles</option>
+                </select>
+    
+
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Preferencias</legend>
+                Frutos secos
+                <select size="5" multiple >
+                    <option value="">Albaricoques</option>
+                    <option value="">Cerezas</option>
+                    <option value="">Fresas</option>
+                    <option value="">Melocotones</option>
+                    <option value="">No lo se</option>
+                    </select> 
+
+                Refrescos
+                <input type="number" size="1">
+
+                <br>
+                <br>    
+
+                Ingrefientes: <br>   
+                Pimiento
+                <input type="checkbox" name="gender" value=""> Champiñon
+                <input type="checkbox" name="gender" value=""> Extra queso
+                <input type="checkbox" name="gender" value="">
+
+                <br>
+                <br>
+
+                Color:
+                <input type="color"><br>
+
+                Sugerencias: <br>
+                <textarea name="" style="height: 80px; width: 1862px;"></textarea>
+                
+            </fieldset> 
+            <br>
+            <fieldset>
+                <legend>Varios</legend>
+                Fotos
+                <input type="file" value=""/>
+    
+                Curriculum (PDF)
+                <input type="file"/>
+
+            </fieldset>
+            <br>
+            <fieldset>
+                <button type="submit">Mandar datos</button>
+                <button type="reset">Borrar datos</button><br>
+                <button type="button">Yo no hago nada</button>
+                
+            </fieldset>
+
+
+        </fieldset>
+    </form>
+   
+</body>
+</html>
+
+<!-- 
+
+    <form>
+
+        First name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname"> <br>
+
+        <br>
+
+        Elegir sexo:  <br>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other <br>
+    
+
+      
+
+    </form>
+
+    <form action="/action_page.php">
+
+        <fieldset>
+        <legend>Personal information:</legend>
+
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey"><br>
+
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+
+        <input type="submit" value="Submit">
+        </fieldset>
+
+        <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+
+        <select name="cars" size="3">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+
+        <select name="cars" size="4" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select> <br>
+
+        <textarea name="message" rows="10" cols="30">
+            The cat was playing in the garden.
+            </textarea> <br>
+
+        <form action="/action_page.php">
+            <input list="browsers">
+            <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+            </datalist>
+        </form>
+
+
+    <form>
+        Birthday (date and time):
+        <input type="datetime-local" name="bdaytime">
+        </form>
+
+        <form>
+            Quantity (between 1 and 5):
+            <input type="number" name="quantity" min="1" max="5">
+            </form>
+
+    </form> -->
+
+    
