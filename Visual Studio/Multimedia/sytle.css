@@ -3,3 +3,9 @@ video {
     background-image: url(imagen.jpeg);
     background-size: cover;
   }
+
+  audio {
+    width: 500px;
+    margin: 10px auto;
+    display: block;
+  }
