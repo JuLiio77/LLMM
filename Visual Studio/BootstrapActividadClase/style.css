@@ -1,8 +1,14 @@
 header{
     text-align: center;
+    background-color: grey  ;
 }
 
 .card{
     margin-top: 20px;
     
+}
+
+footer{
+    text-align: center;
+    background-color: grey  ;
 }
