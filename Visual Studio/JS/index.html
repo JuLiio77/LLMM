@@ -128,50 +128,9 @@
     </script>
 
     <!-- Ejer 12 Escribir un programa que escriba en pantalla los divisores comunes de dos números dados -->
-    <script>
-        function commonFactors(a, b) {
-        let result = [];
-
-        for (let i = 1; i <= Math.min(a, b); i++) {
-            if (a % i === 0 && b % i === 0) {
-            result.push(i);
-            }
-        }
-        return result;
-        }
-
-        let a = 24;
-        let b = 36;
-        let common = commonFactors(a, b);
-
-        console.log("Divisores comunes de " + a + " y " + b + " son: " + common);
-    </script>
-
+    
     <!-- Ejer 13 Escribir un programa que nos diga si un número dado es primo (no es divisible por ninguno otro número que no sea él mismo o la unidad)  -->
 
-    <script>
-    function isPrime(num) {
-        if (num <= 1) {
-          return false;
-        }
-        for (let i = 2; i < num; i++) {
-          if (num % i === 0) {
-            return false;
-          }
-        }
-        return true;
-      }
-      
-      let num = 17;
-      let result = isPrime(num);
-      
-      if (result) {
-        console.log(num + " es un número primo");
-      } else {
-        console.log(num + " no es un número primo");
-      }
-      </script>
-     
     <!-- Ejer 14 Pide la edad y si es mayor de 18 años indica que ya puede conducir. -->
     <script>
         var edad = parseInt(prompt("Introduce tu edad:"));
