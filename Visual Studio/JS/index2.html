@@ -8,17 +8,205 @@
 </head>
 <body>
     <!-- Ejer 1  Reescribir el siguiente codigo usando una sentencia if..else que haga lo mismo:-->
+    <Script>
+        if (browser === 'Edge') {
+            alert("You've got the Edge!");
+
+        } else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+            alert('Okay we support these browsers too');
+
+        } else {
+            alert('We hope that this page looks ok!');
+            }
+    </Script>
+
     <!-- Ejer 2 Reescribir el siguiente codigo usando una única sentencia switch:-->
+    <Script>
+        let a = +prompt('a?', '');
+
+        switch (a) {
+            case 0:
+                alert(0);
+                break;
+            case 1:
+                alert(1);
+                break;
+            case 2:
+            case 3:
+                alert('2,3');
+                break;
+        }
+    </Script>
+
     <!-- Ejer 3  Pide una nota (número). Muestra la calificación según la nota:-->
+    <script>
+        var nota = parseFloat(prompt("Introduce tu nota:", ""));
+
+        if (nota >= 0 && nota < 3) {
+        alert("Muy deficiente");
+        
+        } else if (nota >= 3 && nota < 5) {
+        alert("Insuficiente");
+
+        } else if (nota >= 5 && nota < 7) {
+        alert("Suficiente");
+
+        } else if (nota >= 7 && nota < 9) {
+        alert("Bien");
+
+        } else if (nota >= 9 && nota <= 10) {
+        alert("Sobresaliente");
+
+        } else {
+        alert("La nota que has introducido no es válida");
+        }
+    </script>
+
     <!-- Ejer 4 Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un “alert” y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.-->
+    <script>
+        let suma = 0;
+        let numero;
+
+        while (true) {
+        numero = parseFloat(prompt("Introduce un número:", ""));
+
+        if (isNaN(numero)) {
+        if (numero === null) {
+        break;
+        }
+            alert("Por favor, introduce un número válido");
+            continue;
+        }
+        suma += numero;
+        }
+
+        if (suma > 0) {
+            alert("La suma total de los números introducidos es: " + suma);
+        } else {
+            alert("No se ha introducido ningún número");
+        }
+    </script>
+    
     <!-- Ejer 5  Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :-->
+    <script>
+        for (let i = 1; i <= 30; i++) {
+        let linea = "";
+
+        for (let j = 1; j <= i; j++) {
+        linea += i;
+        }
+        console.log(linea);
+        }
+    </script>
+
     <!-- Ejer 6 Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario de la siguiente forma : (suponiendo que indica 30).-->
+    <script>
+    var num = parseInt(prompt("Introduce un número:", ""));
+
+        for (let i = num; i >= 1; i--) {
+        let linea = "";
+
+        for (let j = 1; j <= numenumro - i + 1; j++) {
+        linea += i;
+
+        }
+        console.log(linea);
+        }
+        </script>
+
     <!-- Ejer 7 Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50) :-->
+    <script>
+        var num = parseInt(prompt("Introduce un número (máximo 50):", ""));
+
+        if (num > 50) {
+            num = 50;
+        }
+
+        for (let i = 1; i <= num; i++) {
+        let linea = "";
+
+        for (let j = 1; j <= i; j++) {
+        linea += j;
+        }
+        console.log(linea);
+        }
+    </script>
+
     <!-- Ejer 8 Crea un script que escriba los números del 1 al 500, que indique cuales son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo:-->
+    <script>
+        for (let i = 1; i <= 500; i++) {
+        if (i % 4 === 0) {
+        console.log(i + " (Múltiplo de 4)");
+
+        } else if (i % 9 === 0) {
+        console.log(i + " (Múltiplo de 9)");
+
+        } else {
+        console.log(i);
+
+        }
+        if (i % 5 === 0) {
+        console.log("");
+        }
+        }
+    </script>
+
     <!-- Ejer 9 Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.-->
+    <script>
+        let filas = +prompt("Introduce el número de filas:", "");
+        let columnas = +prompt("Introduce el número de columnas:", "");
+        let num = filas * columnas;
+
+        for (let i = 1; i <= filas; i++) {
+        let fila = "";
+
+        for (let j = 1; j <= columnas; j++) {
+            fila += num + " ";
+            num--;
+        }
+        console.log(fila);
+        }
+    </script>
+
     <!-- Ejer 10 Realiza un script que genere un número aleatorio entre 1 y 99-->
+    <script>
+        let randomNumber = Math.floor(Math.random() * (99 - 1 + 1)) + 1;
+        console.log(randomNumber);
+    </script>
+
     <!-- Ejer 11 Genera 3 números aleatorios entre 1 y 99 pero que no se repita ninguno-->
+    <script>
+        let arr = [];
+        while (array.length < 3) {
+        let randomNumber = Math.floor(Math.random() * 99) + 1;
+
+        if (array.indexOf(randomNumber) === -1) {
+            array.push(randomNumber);
+        }
+        }
+
+        console.log(array);
+    </script>
+    
     <!-- Ejer 12 Realiza un script que muestre la serie de fibonacci hasta un número entre 1 y 100 pedido por teclado-->
+    <script>
+        let num = parseInt(prompt("Ingresa un número entre 1 y 100:"));
+
+        let A = 0;
+        let B = 1;
+        let C;
+
+        console.log(A);
+        console.log(B);
+
+        for (let i = 2; i < num; i++) {
+        C = A + B;
+        console.log(C);
+        A = B;
+        B = C;
+        }
+
+    </script>
     <!-- Ejer 13 Realiza un juego de Piedra Papel Tijera contra el Pc.-->
     <!-- Ejer 14 Crea una función que devuelva el número PI con dos decimales. Utiliza la variable PI que ya existe en javascript-->
 </body>
