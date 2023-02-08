@@ -1,24 +1,109 @@
 header{
-    border-bottom: 2px solid #666;
-    margin-left: 4%;
-    margin-right: 4%;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-bottom: 10px;
+    background-color:rgb(255, 0, 0);
+    
+}
+
+.Principal {
     display: grid;
-    justify-content: center; 
-    text-align: center  ;
+    grid-template-rows: 10% 40% 40% 10%;
+    grid-template-columns: repeat(4, 25%);
 }
 
-.container {
-    display: flex;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: 100px 300px 300px 100px
+img, video{
+    width: 90%;
 }
 
+figcaption{
+    text-align: left;
+    width: 100%;
+    font-size: 15px;
+}
 
 footer{
-    border-bottom: 2px solid #666;
-    margin-left: 4%;
-    margin-right: 4%;
-    display: grid;
-    justify-content: center; 
-    text-align: center  ;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 4/5;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    background-color:rgb(255, 0, 0);
+    
+}
+
+@media screen and (max-width: 600px) {
+    .Principal{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 10% auto auto auto auto 10%;
+    }
+
+    header{
+        grid-column: 1/5;
+    }
+    img, video{
+        grid-column: 1/2;
+        
+    }
+    figcaption{
+        grid-column: 2/3;
+    }
+    footer{
+        grid-column: 1/5;
+        grid-row: 6/7;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .Principal{
+        grid-template-columns: repeat(4, 50%);
+        grid-template-rows: 10% auto auto auto auto 10%;
+    }
+    header{
+        grid-column: 1/5;
+    }
+
+    img, video{
+        grid-column: 2/2;    
+    }
+    
+    figcaption{
+        grid-column: 3/3;   
+    }
+
+    footer{
+        grid-column: 1/5;
+        grid-row: 6/7;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    .Principal{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 10% auto auto auto auto 10%;
+    }
+    header{
+        grid-column: 1/5;
+    }
+
+    img, video{
+        grid-column: 1/2;    
+    }
+    
+    figcaption{
+        grid-column: 2/3;   
+    }
+
+    footer{
+        grid-column: 1/5;
+        grid-row: 6/7;
+    }
+
 }
