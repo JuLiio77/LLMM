@@ -8,31 +8,7 @@
 </head>
 <body>
     <!-- Ejer 1  Reescribir el siguiente codigo usando una sentencia if..else que haga lo mismo:-->
-<<<<<<< HEAD
 
-    <!-- Ejer 2 Reescribir el siguiente codigo usando una única sentencia switch:-->
-
-    <!-- Ejer 3  Pide una nota (número). Muestra la calificación según la nota:-->
-
-    <!-- Ejer 4 Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un “alert” y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.-->
-   
-    <!-- Ejer 5  Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :-->
-   
-    <!-- Ejer 6 Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario de la siguiente forma : (suponiendo que indica 30).-->
-    
-    <!-- Ejer 7 Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50) :-->
-   
-    <!-- Ejer 8 Crea un script que escriba los números del 1 al 500, que indique cuales son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo:-->
-   
-    <!-- Ejer 9 Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.-->
-    
-    <!-- Ejer 10 Realiza un script que genere un número aleatorio entre 1 y 99-->
-   
-    <!-- Ejer 11 Genera 3 números aleatorios entre 1 y 99 pero que no se repita ninguno-->
-    
-    <!-- Ejer 12 Realiza un script que muestre la serie de fibonacci hasta un número entre 1 y 100 pedido por teclado-->
-    
-=======
     <Script>
         if (browser === 'Edge') {
             alert("You've got the Edge!");
@@ -131,7 +107,7 @@
         for (let i = num; i >= 1; i--) {
         let linea = "";
 
-        for (let j = 1; j <= numenumro - i + 1; j++) {
+        for (let j = 1; j <= num - i + 1; j++) {
         linea += i;
 
         }
@@ -232,10 +208,18 @@
         }
 
     </script>
->>>>>>> ea49176a759691b887739991bb78493204cfad6c
+
     <!-- Ejer 13 Realiza un juego de Piedra Papel Tijera contra el Pc.-->
    
     <!-- Ejer 14 Crea una función que devuelva el número PI con dos decimales. Utiliza la variable PI que ya existe en javascript-->
+    <script>
+        function getPi() {
+        return parseFloat(Math.PI.toFixed(2));
+        }
+        console.log(getPi());
+
+
+    </script>
     
 </body>
 </html>
