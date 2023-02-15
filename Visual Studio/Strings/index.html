@@ -135,7 +135,7 @@
         </script> -->
 
     <!-- Ejer 7 Escribe un programa que pida una frase y escriba las vocales que aparecen. -->
-        <script>
+        <!-- <script>
 
             let palabra = prompt("escribe un palabra")
             let vocal  = ""
@@ -146,23 +146,80 @@
                 }
             }
 
-        </script>
+        </script> -->
+
     <!-- Ejer 8 Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales. -->
-        <script>
+        <!-- <script>
+            let frase = prompt("Ingrese una frase:");
+            let vocales = "aeiouAEIOU";
+            let contador = 0;
 
-        </script>
+            for (let i = 0; i < frase.length; i++) {
+            let letra = frase.charAt(i);
+            if (vocales.includes(letra)) {
+                contador++;
+            }
+            }
+
+            console.log("La frase ingresada contiene " + contador + " vocales.");
+
+        </script> -->
+
     <!-- Ejer 9 Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales. -->
-        <script>
+        <!-- <script>
+            var frase = prompt("Ingrese una frase:");
+            let vocales = "aeiouAEIOU";
+            let contador = [0, 0, 0, 0, 0]; // contador[0] es para 'a', contador[1] para 'e', etc.
 
-        </script>
+            for (let i = 0; i < frase.length; i++) {
+            let letra = frase.charAt(i);
+            let indice = vocales.indexOf(letra);
+            if (indice >= 0) {
+                contador[indice]++;
+            }
+            }
+
+            console.log("La frase ingresada contiene:");
+            console.log(" - " + contador[0] + " veces la vocal 'a'");
+            console.log(" - " + contador[1] + " veces la vocal 'e'");
+            console.log(" - " + contador[2] + " veces la vocal 'i'");
+            console.log(" - " + contador[3] + " veces la vocal 'o'");
+            console.log(" - " + contador[4] + " veces la vocal 'u'");
+
+
+        </script> -->
+
     <!-- Ejer 10 Realiza un script que pida una cadena de texto y la muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir -->
-        <script>
+        <!-- <script>
 
-        </script>
+        let cadena = prompt("Ingrese una cadena de texto:");
+        let resultado = "";
+
+        for (let i = 0; i < cadena.length; i++) {
+        resultado += cadena.charAt(i) + "-";
+        }
+
+        console.log(resultado.slice(0, -1));
+
+
+        </script> -->
+
     <!-- Ejer 11 Pedimos una cadena de texto que sabemos que puede contener paréntesis. Realiza un script que extraiga la cadena que se encuentra entre los paréntesis. -->
-        <script>
+        <!-- <script>
 
-        </script>
+            let cadena = prompt("Ingrese una cadena de texto que contenga paréntesis:");
+            let indiceApertura = cadena.indexOf("(");
+            let indiceCierre = cadena.indexOf(")");
+
+            if (indiceApertura >= 0 && indiceCierre >= 0 && indiceCierre > indiceApertura) {
+            let subcadena = cadena.slice(indiceApertura + 1, indiceCierre);
+            console.log("La subcadena encontrada es: " + subcadena);
+            } else {
+            console.log("La cadena ingresada no contiene paréntesis o no están balanceados.");
+            }
+
+
+        </script> -->
         
     <!-- Ejer 12 Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”. No usar ninguna función de strings para resolverlo. -->
         <!-- <script>
@@ -181,9 +238,28 @@
 
         </script>
     <!-- Ejer 14 Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado. -->
-        <script>
+        <!-- <script>
 
-        </script>
+            let texto = prompt("Ingrese un texto:");
+            let vocales = "aeiou";
+            let posicion = -1;
+
+            for (let i = 0; i < texto.length; i++) {
+            let letra = texto.charAt(i).toLowerCase();
+            if (vocales.indexOf(letra) !== -1) {
+                posicion = i;
+                break;
+            }
+            }
+
+            if (posicion !== -1) {
+            console.log("La primera vocal se encuentra en la posición " + posicion + ".");
+            } else {
+            console.log("El texto ingresado no contiene vocales.");
+            }
+
+
+        </script> -->
     <!-- Ejer 15 Realiza el mismo ejercicio anterior pero utilizando el método includes. -->
         <script>
             
