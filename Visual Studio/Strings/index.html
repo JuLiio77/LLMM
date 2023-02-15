@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ejer 1 Realiza un script que pida un texto y determine si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas. -->
+        <!-- <script>
+
+            function compara(texto){
+                if(texto == texto.toUpperCase()){
+                document.write("todo esta en mayúscula")
+
+            } else if(texto == texto.toLowerCase()){
+                document.write("todo esta en minuscula")
+
+            } else 
+                document.write("contiene mayusculas y minusculas")
+            }
+
+            var texto = prompt("Introducir texto")
+            compara(texto)
+        </script> -->
+
+    <!-- Ejer 2 Escribir una función ucFirst(str) que devuelva la cadena str con solo el primer carácter en mayúsculas, por ejemplo:ucFirst("john") == "John"; -->
+        <!-- <script>
+
+            function ucFirst(str) {
+                return str.substring(0,1).toUpperCase()+str.substring(1,str.length)
+           
+            }
+            var str = prompt("Introduce un texto")
+            document.write(str)
+
+        </script> -->
+
+    <!-- Ejer 3 Comprobar palabras spam: Escribe una función checkSpam(str) que devuelva true si str contiene la subcadena ‘viagra’ o ‘XXX’, en otro caso devuelve false. -->
+        <!-- <script>
+
+            function checkSpam(str) {
+            let lowerStr = str.toLowerCase();
+            return lowerStr.includes("viagra") || lowerStr.includes("xxx");
+            }
+
+        </script> -->
+        
+    <!-- Ejer 4 Truncar textos: Crear una funcion truncate(str, maxlength) que compruebe la longitud de la cadena str y, si supera maxlength sustituya el final de la cadena str con el caracter elipsis"...", para hacer que tenga una longitud igual a maxlength. -->
+        <!-- <script>
+
+            function truncate(str, maxlength){
+                
+                maxlength + 20
+                if(str.lengt > maxlength){
+                    document.write (str.substring(0,maxlength) + "...")
+
+                } else {
+                    document.write(str)
+                }
+            }
+            let texto = prompt("escrbir texto")
+
+            var maxlength = +prompt("escribe el maximo")
+
+            truncate(texto, maxlength)
+
+        </script> -->
+
+    <!-- Ejer 5 Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión - -->
+        <!-- <script>
+
+        // let concatenatedString = "";
+
+        // while (true) {
+        // let inputString = prompt("Ingrese una cadena de texto:");
+
+        // if (inputString === null) {
+        //     break; // Si se pulsa "cancelar", se sale del bucle
+        // }
+
+        // concatenatedString += inputString + "-";
+        // }
+
+        // // Se elimina el guión extra al final de la cadena concatenada
+        // concatenatedString = concatenatedString.slice(0, -1);
+
+        // console.log(concatenatedString);
+
+
+            // let str = ""
+            // let str2
+
+            // while (true){
+            //     str2 = prompt("introducir una cadena")
+            //     if(str2 === null){
+            //         break
+            //     }
+            //     str += str2 +"-"
+            // }
+           // alert(str)
+
+        </script> -->
+
+    <!-- Ejer 6 Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a. -->
+        <!-- <script>
+
+            // let frase = prompt("Escribe una frase:"); 
+            // let contador = 0; 
+
+            // for (let i = 0; i < frase.length; i++) {
+            // if (frase[i] === "a" || frase[i] === "A") {
+            //     contador++; 
+            // }
+            // }
+
+            // console.log(`La letra "a" aparece ${contador} veces en la frase "${frase}".`);
+            // alert
+
+            let texto = prompt("escribir texto")
+
+            let num = 0
+
+            function compara(texto){
+                for (let i = 0; i < frase.length; i++){
+                    if (texto[i] == "a")
+                    num ++
+                }
+                return num 
+            }
+
+            document.write(num)
+
+        </script> -->
+
+    <!-- Ejer 7 Escribe un programa que pida una frase y escriba las vocales que aparecen. -->
+        <script>
+
+            let palabra = prompt("escribe un palabra")
+            let vocal  = ""
+
+            for (let i = 0; i < palabra.length; i++) {
+                if(i==a){
+                    vocal += "a";
+                }
+            }
+
+        </script>
+    <!-- Ejer 8 Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales. -->
+        <script>
+
+        </script>
+    <!-- Ejer 9 Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales. -->
+        <script>
+
+        </script>
+    <!-- Ejer 10 Realiza un script que pida una cadena de texto y la muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir -->
+        <script>
+
+        </script>
+    <!-- Ejer 11 Pedimos una cadena de texto que sabemos que puede contener paréntesis. Realiza un script que extraiga la cadena que se encuentra entre los paréntesis. -->
+        <script>
+
+        </script>
+        
+    <!-- Ejer 12 Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”. No usar ninguna función de strings para resolverlo. -->
+        <!-- <script>
+
+            let str = prompt("introducir texto");
+
+            for (let index = 0; index < array.length; index++) {
+                document.write(str[i])
+                
+            }
+
+        </script> -->
+
+    <!-- Ejer 13 Realiza un script que pida un texto e indique si es un palíndromo. Ejemplos: “Dábale arroz a la zorra el abad”."La ruta nos aporto otro paso natural" -->
+        <script>
+
+        </script>
+    <!-- Ejer 14 Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado. -->
+        <script>
+
+        </script>
+    <!-- Ejer 15 Realiza el mismo ejercicio anterior pero utilizando el método includes. -->
+        <script>
+            
+        </script>
+
+
+</body>
+</html>
