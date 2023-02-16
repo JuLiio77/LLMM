@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Ejer 1 Crear un array llamado meses y que almacene el nombre de los doce meses del año. -->
+    <!-- <script>
+        let meses = ["Enero", "Febreo", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+
+        for (let i = 0; i < meses.length; i++) {
+        document.write("El mes de " +meses[i]+ " esta en la posicion " +i+ "</br>")
+        }
+    </script> -->
+    
+    <!-- Ejer 2 Crea una función que reciba un parámetro, un dni, y devuelva la letra del mismo. Si el dni pasado tiene algún error devolverá “”. -->
+    <!-- <script>
+        function calcularLetraDNI(dni) {
+        // Comprobamos que el parámetro es un número válido
+        if (isNaN(dni) || dni < 0 || dni > 99999999) {
+            return ""; // DNI inválido, devolvemos cadena vacía
+        }
+        
+        // Obtenemos el resto de dividir el DNI entre 23
+        var resto = dni % 23;
+        
+        // Creamos una tabla con las letras correspondientes a cada resto
+        var tablaLetras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        
+        // Devolvemos la letra correspondiente al resto
+        return tablaLetras.charAt(resto);
+        }
+        var dni = "26524266";
+        var letraDNI = calcularLetraDNI(dni);
+        document.write("La letra del DNI " + dni + " es " + letraDNI);
+
+       // let letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+    </script> -->
+
+    <!-- Ejer 3 Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. -->
+    <script>
+        // Pedimos los nombres y las edades por teclado
+        var nombres = [];
+        var edades = [];
+        for (var i = 0; i < 3; i++) {
+        nombres[i] = prompt("Introduce el nombre " + (i + 1) + ":");
+        edades[i] = parseInt(prompt("Introduce la edad de " + nombres[i] + ":"));
+        }
+
+        // Buscamos la edad mayor
+        var indiceMayor = 0;
+        for (var i = 1; i < 3; i++) {
+        if (edades[i] > edades[indiceMayor]) {
+            indiceMayor = i;
+        }
+        }
+
+        // Mostramos el nombre del mayor
+       document.write("La persona de mayor edad es " + nombres[indiceMayor]);
+
+    </script>
+
+</body>
+</html>
