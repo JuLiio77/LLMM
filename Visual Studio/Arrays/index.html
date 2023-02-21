@@ -42,7 +42,7 @@
     </script> -->
 
     <!-- Ejer 3 Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. -->
-    <script>
+    <!-- <script>
         // Pedimos los nombres y las edades por teclado
         var nombres = [];
         var edades = [];
@@ -62,7 +62,112 @@
         // Mostramos el nombre del mayor
        document.write("La persona de mayor edad es " + nombres[indiceMayor]);
 
-    </script>
+    </script> -->
 
+    <!-- Ejer 4 Realizar una página con un script que calcule el valor de la letra de un número de DNI. -->
+    <!-- <script>
+        while (true) {
+        let numeroDNI = prompt("Introduce el número de DNI (sin letra):");
+        
+        if (numeroDNI === null) {
+            // El usuario ha pulsado "cancelar"
+            break;
+        }
+        
+        numeroDNI = parseInt(numeroDNI);
+        
+        if (isNaN(numeroDNI) || numeroDNI < 0 || numeroDNI > 99999999) {
+            alert("Introduce un número válido entre 0 y 99999999");
+            continue;
+        }
+        
+        const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        const indiceLetra = numeroDNI % 23;
+        const letraDNI = letras.charAt(indiceLetra);
+        
+        document.write(`La letra del DNI ${numeroDNI} es ${letraDNI}`);
+        }
+
+
+    </script> -->
+
+    <!-- Ejer 5 Realizar estas 5 tareas con el mismo array:
+    <script>
+        let estilosMusica = ["Jazz", "Blues"];
+        document.write(estilosMusica); // ["Jazz", "Blues"]
+
+        estilosMusica.push("Rock-n-Roll");
+        document.write(estilosMusica); // ["Jazz", "Blues", "Rock-n-Roll"]
+
+        const indiceCentral = Math.floor(estilosMusica.length / 2);
+        estilosMusica[indiceCentral] = "Clásicos";
+        document.write(estilosMusica); // ["Jazz", "Clásicos", "Rock-n-Roll"]
+
+        const primerElemento = estilosMusica.shift();
+        document.write(primerElemento); // "Jazz"
+        document.write(estilosMusica); // ["Clásicos", "Rock-n-Roll"]
+
+        estilosMusica.unshift("Rap", "Reggae");
+        document.write(estilosMusica); // ["Rap", "Reggae", "Clásicos", "Rock-n-Roll"]
+
+    </script> -->
+
+    <!-- Ejer 6 Crea un script que imprima 14 resultados aleatorios de una quiniela 1 X 2. Ejemplo de resultado: -->
+    <!-- <script>
+        const resultados = ["1", "X", "2"];
+
+        for (let i = 1; i <= 14; i++) {
+        const resultadoAleatorio = resultados[Math.floor(Math.random() * resultados.length)];
+        document.write( `Resultado ${i}: ${resultadoAleatorio}` );
+        }
+
+    </script> -->
+
+    <!-- Ejer 7 Crea el script anterior pero con la probabilidad de que salga el 1 sea del 60%, la de la X del 30% y la del 2 del 10% -->
+    <!-- <script></script> -->
+
+    <!-- Ejer 8 Crear una función que sume todos los elementos de un array y otra que a partir de un rango de valores minimo y maximo y un paso, devuelva un array con los elementos comprendidos dentro de dicho rango. El paso puede ser negativo también. -->
+    <!-- <script>
+        function sum(array) {
+        let total = 0;
+        for (let i = 0; i < array.length; i++) {
+          total += array[i];
+        }
+        return total;
+      }
+      
+      function range(start, end, step = 1) {
+        let array = [];
+      
+        if (step > 0) {
+          for (let i = start; i <= end; i += step) {
+            array.push(i);
+          }
+        } else {
+          for (let i = start; i >= end; i += step) {
+            array.push(i);
+          }
+        }
+      
+        return array;
+      }
+      
+      document.write(range(1, 10)); // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      document.write(range(5, 2, -1)); // → [5, 4, 3, 2]
+      document.write(sum(range(1, 10))); // → 55
+
+      </script> -->
+
+      <!-- Ejer 9 Escribe una función (invertirCadena()) que tome como parámetro la palabra introducida por el usuario y retorne la palabra escrita a la inversa. -->
+      <script>
+        function invertirCadena(palabra) {
+        return palabra.split("").reverse().join("");
+        }
+        
+        let palabra = prompt("Introduce una palabra:");
+        let resultado = invertirCadena(palabra);
+        
+        document.write(resultado);
+      </script>
 </body>
 </html>
