@@ -91,8 +91,9 @@
 
     </script> -->
 
-    <!-- Ejer 5 Realizar estas 5 tareas con el mismo array:
-    <script>
+    <!--Ejer 5 Realizar estas 5 tareas con el mismo array: -->
+
+    <!-- <script>
         let estilosMusica = ["Jazz", "Blues"];
         document.write(estilosMusica); // ["Jazz", "Blues"]
 
@@ -118,13 +119,35 @@
 
         for (let i = 1; i <= 14; i++) {
         const resultadoAleatorio = resultados[Math.floor(Math.random() * resultados.length)];
-        document.write( `Resultado ${i}: ${resultadoAleatorio}` );
+        document.write( 'Resultado ${i}: ${resultadoAleatorio}' );
         }
 
     </script> -->
 
     <!-- Ejer 7 Crea el script anterior pero con la probabilidad de que salga el 1 sea del 60%, la de la X del 30% y la del 2 del 10% -->
-    <!-- <script></script> -->
+    <!-- <script>
+    
+    const resultados = ["1", "X", "2"];
+    const probabilidades = [0.6, 0.3, 0.1];
+
+    for (let i = 1; i <= 14; i++) {
+      let resultadoAleatorio = '';
+      const randomNum = Math.random();
+      let acumProb = 0;
+
+      for (let j = 0; j < probabilidades.length; j++) {
+        acumProb += probabilidades[j];
+
+        if (randomNum < acumProb) {
+          resultadoAleatorio = resultados[j];
+          break;
+        }
+      }
+
+      document.write(`Resultado ${i}: ${resultadoAleatorio} <br>`);
+    }
+  </script> -->
+
 
     <!-- Ejer 8 Crear una función que sume todos los elementos de un array y otra que a partir de un rango de valores minimo y maximo y un paso, devuelva un array con los elementos comprendidos dentro de dicho rango. El paso puede ser negativo también. -->
     <!-- <script>
@@ -159,7 +182,7 @@
       </script> -->
 
       <!-- Ejer 9 Escribe una función (invertirCadena()) que tome como parámetro la palabra introducida por el usuario y retorne la palabra escrita a la inversa. -->
-      <script>
+      <!-- <script>
         function invertirCadena(palabra) {
         return palabra.split("").reverse().join("");
         }
@@ -168,6 +191,36 @@
         let resultado = invertirCadena(palabra);
         
         document.write(resultado);
-      </script>
-</body>
+
+      </script> -->
+
+    <!-- Ejer 10 Añade una nueva función que haga uso de la función invertirCadena() para verificar si es un palíndromo. -->
+    <!-- <script></script> -->
+
+    <!-- Ejer 11 A partir del siguiente array que se proporciona: var valores = [true, 5, false, "hola", "adios", 2];-->
+    <!-- <script></script> -->
+
+    <!-- Ejer 12 El factorial de un número entero n es una operación matemática que consiste en multiplicar todos los factores n x (n-1) x (n-2) x ... x 1. Así, el factorial de 5 (escrito como 5!) es igual a: 5! = 5 x 4 x 3 x 2 x 1 = 120. Utilizando la estructura for, crear un script que calcule el factorial de un número entero. -->
+    <script>
+
+      function calcularFactorial(numero) {
+      let factorial = 1;
+      for (let i = 1; i <= numero; i++) {
+        factorial *= i;
+      }
+      return factorial;
+    }
+    
+    // Ejemplo de uso
+    document.write(calcularFactorial(5)); // Devuelve 120
+    </script>
+
+    <!-- Ejer 13 Escribir un script que simule el lanzamiento de tres dados. Hacer uso de la función Math.random para obtener números aleatorios entre 1 y 6 para cada uno de los lanzamientos de los dados -->
+    <!-- <script></script> -->
+
+
+
+
+
+  </body>
 </html>
