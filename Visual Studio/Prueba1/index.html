@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- EJER 1 Filtrar valores únicos: Escribir una función que devuelva los valores únicos de un Array, es decir que no estén repetidos. Ej: dado [a,b,b,d,e,c,d,c] devuelve [a,b,d,e,c] -->
+    <!-- <script>
+    function NoRepetir(array) {
+    return array.filter((valor, indice) => array.indexOf(valor) === indice);
+    }
+
+    let arr = ['a', 'b', 'b', 'd', 'e', 'c', 'd', 'c'];
+    let unicos = NoRepetir(arr); 
+
+    document.write(unicos)
+
+    </script> -->
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- EJER 2 Ordenar en orden decreciente:
+    let arr = [5, 2, 1, -10, 8];
+
+    // ... tu código para ordenar en orden decreciente
+    alert( arr ); // 8, 5, 2, 1, -10
+
+    -->
+
+    <!-- <script>
+        let arr = [5, 2, 1, -10, 8];
+
+        arr.sort(function(b, a) {
+        return a - b;
+        });
+        document.write(arr); 
+    </script> -->
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- EJER 3 Filtrar array según un rango máximo y mínimo de valores: Escribir una función llamada filtrarRango(arr, a, b) que a partir del array “arr”, busque elementos con valor mayor o igual a “a” y menores o iguales a “b” y los devuelva como un array. -->
+
+    <!-- <script>
+        function Filtrar(numero) {
+        return numero <= 3;
+        }
+        let array = [5,3,8,1].filter(Filtrar).reverse();
+        document.write(array)
+    </script> -->
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- Ejer 4 Devolver el nombre de una imagen pasado por url:
+    var url='https://i.pinimg.com/originals/ca/94/78/ca947819f35acaba3df6fb08bfb5127f.jpg' -->
+
+    <!-- <script>
+        let url = 'https://i.pinimg.com/originals/ca/94/78/ca947819f35acaba3df6fb08bfb5127f.jpg';
+        let nombre = url.split('/').pop();
+        document.write(nombre); 
+
+        Luego, se utiliza el método split() para separar la URL en segmentos utilizando el caracter "/" como separador. Esto crea un array con cada segmento de la URL como elemento.
+
+        Después, se utiliza el método pop() para obtener el último elemento del array, que en este caso es el nombre del archivo de la imagen. Este valor se asigna a la variable nombre.
+
+        Por último, se utiliza el método document.write() para escribir el valor de nombre en la página web. En resumen, este código obtiene el nombre del archivo de una imagen a partir de su URL y lo muestra en la página web.
+
+    </script> -->
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- Ejer 5 Escribe una función que dado un array como el siguiente:
+    let arr = [“HolaMundo”, “AdiosMundo”];
+
+    Retorne las palabras a la inversa en minúsculas
+
+    odnumaloh, odnumsoida
+    -->
+    <!-- <script>
+        
+        function invertir(palabra) {
+        return palabra.split("").reverse().join("");
+        }
+        
+        let palabra = "HolaMundo "+ "-" + " AdiosMundo"
+        let resultado = invertir(palabra);
+        
+        document.write(resultado);
+       
+
+    </script> -->
+    
+</body>
+</html>
+
