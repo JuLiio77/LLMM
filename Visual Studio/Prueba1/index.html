@@ -28,9 +28,7 @@
     let arr = [5, 2, 1, -10, 8];
 
     // ... tu código para ordenar en orden decreciente
-    alert( arr ); // 8, 5, 2, 1, -10
-
-    -->
+    alert( arr ); // 8, 5, 2, 1, -10 -->
 
     <!-- <script>
         let arr = [5, 2, 1, -10, 8];
@@ -47,13 +45,18 @@
 
     <!-- EJER 3 Filtrar array según un rango máximo y mínimo de valores: Escribir una función llamada filtrarRango(arr, a, b) que a partir del array “arr”, busque elementos con valor mayor o igual a “a” y menores o iguales a “b” y los devuelva como un array. -->
 
-    <!-- <script>
-        function Filtrar(numero) {
-        return numero <= 3;
+    <script>
+        // function filtrarRango(numero) {
+        // return numero <= 3
+        // }
+        // let arr = [5,3,8,1].filter(filtrarRango).reverse()
+        // document.write(arr)
+
+        let array =[5,3,8,1]
+        function filtrarRango(arr, a, b){
+            return array.filter(elem => elem >= a && elem <= b)
         }
-        let array = [5,3,8,1].filter(Filtrar).reverse();
-        document.write(array)
-    </script> -->
+    </script>
 
 
     <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -67,11 +70,11 @@
         let nombre = url.split('/').pop();
         document.write(nombre); 
 
-        Luego, se utiliza el método split() para separar la URL en segmentos utilizando el caracter "/" como separador. Esto crea un array con cada segmento de la URL como elemento.
+        // Luego, se utiliza el método split() para separar la URL en segmentos utilizando el caracter "/" como separador. Esto crea un array con cada segmento de la URL como elemento.
 
-        Después, se utiliza el método pop() para obtener el último elemento del array, que en este caso es el nombre del archivo de la imagen. Este valor se asigna a la variable nombre.
+        // Después, se utiliza el método pop() para obtener el último elemento del array, que en este caso es el nombre del archivo de la imagen. Este valor se asigna a la variable nombre.
 
-        Por último, se utiliza el método document.write() para escribir el valor de nombre en la página web. En resumen, este código obtiene el nombre del archivo de una imagen a partir de su URL y lo muestra en la página web.
+        // Por último, se utiliza el método document.write() para escribir el valor de nombre en la página web. En resumen, este código obtiene el nombre del archivo de una imagen a partir de su URL y lo muestra en la página web.
 
     </script> -->
 
@@ -86,20 +89,31 @@
 
     odnumaloh, odnumsoida
     -->
-    <!-- <script>
+    <script>
         
         function invertir(palabra) {
-        return palabra.split("").reverse().join("");
+        return palabra.split("").reverse().join("").toLowerCase()
         }
         
         let palabra = "HolaMundo "+ "-" + " AdiosMundo"
         let resultado = invertir(palabra);
         
         document.write(resultado);
+
+
+        // let normal =["HolaMundo", "AdiosMundo"]
+
+        // function reverse(normal){
+        //     function letra(letra){
+        //         return letra.split('').reverse().join('').toLowerCase()
+        //     }
+        //     return array.map(letra)
+        // }
+
+        // document.write(reverse(normal))
        
 
-    </script> -->
-    
+    </script>
 </body>
 </html>
 
