@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Ejer 1 Eliminar valores fuera de rango: Escribir una función llamada
+    filtrarRangoEnPosicion(arr, a, b) que a partir del array “arr”, elimine de
+    el todos los valores que no esten entre “a” y “b”.
+
+    La comprobación que hay que hacer es: a ≤ arr[i] ≤ b.
+
+    La función debe modificar solo el array original.
+
+
+    El método slice() devuelve una copia de una parte del array dentro de un nuevo array empezando por inicio hasta fin (fin no incluido). 
+    El array original no se modificará.
+
+-->
+
+    <script>
+
+        let arr = [10,5,2,8,11,9]
+        filtrarRangoEnPosicion(arr, 2, 9)
+        
+        function filtrarRangoEnPosicion(arr, a, b) {
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+
+            if (arr[i] < a || arr[i] > b) {
+                arr.splice(i, 1)
+                }
+            }
+        }
+
+        document.write(arr)
+        
+
+
+    </script>
+</body>
+</html>
