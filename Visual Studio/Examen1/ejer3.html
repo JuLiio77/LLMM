@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Julio Vera Espejo
+
+    // A partir de un array de strings como el del ejemplo:
+
+    // var arr = [2 , ‘prueba spam’, ‘a spam escribir algo aquí’, 6];
+
+    // Almacena en un nuevo array aquellos elementos que sean una cadena de texto.
+    // Ordenarlo según la longitud, de mayor a menor.
+    // Eliminar aquellas apariciones de la palabra spam en el array, de manera que se obtenga un array como este del ejemplo:
+
+    // La salida sería: ['a escribir algo aquí','prueba ']
+
+    // Multiplica los valores que sean números mostrándolo por pantalla
+
+
+    var arr = [2, 'prueba spam', 'a spam escribir algo aquí', 6]
+
+    // filtar lso elementos que sean una cadena de texto
+    var filtrarArray = arr.filter(function(element) {
+
+    return typeof element === 'string'
+    })
+
+    // ordenar los elementos de mayor a menos
+    var ordenarArray = filtrarArray.sort(function(a, b) {
+
+    return b.length - a.length
+    })
+
+    // quitamos la palabra spam
+    var eliminarArray = ordenarArray.map(function(element) {
+
+    return element.replace('spam', '')
+
+    }).filter(function(element) {
+
+    return element.length > 0
+    })
+
+    document.write(eliminarArray)
+
+    </script>
+</body>
+</html>

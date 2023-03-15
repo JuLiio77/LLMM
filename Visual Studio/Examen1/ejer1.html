@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+  // Julio Vera Espejo
+
+  // Escribir un script que extraiga de una url el host, el path y el esquema (http, ftp etc..) considerando que esto es un ejemplo y nuestro código se debe adaptar a cualquier tipo de entrada. Crea una función para cada tipo de salida (esquema, host, path)
+  // Entrada: https://www.dominio.com/descargas/archivo1.pdf
+
+  // Salida:
+  // Esquema: https
+  // Host: www.dominio.com
+  // Path: /descargas/archivo1.pdf
+
+  let url = 'https://www.dominio.com/descargas/archivo1.pdf';
+
+  //  con esta funcion obtenemos el esquema de la url = https
+  function getEsquema(url) {
+    let pasarUrl = new URL(url)
+    return pasarUrl.esquemaname
+  }
+
+  // con esta funcion obtenemos el host de la url = www.dominio.com
+  function getHost(url) {
+    let pasarUrl = new URL(url)
+    return pasarUrl.hostname
+  }
+
+  // con esta funcion sacamos el path de la url = /descargas/archivo1.pdf
+  function getPath(url) {
+    let pasarUrl = new URL(url)
+    return pasarUrl.pathname
+  }
+
+  document.write('Esquema:', getEsquema(url))
+  document.write('Host:', getHost(url))
+  document.write('Path:', getPath(url))
+
+
+
+    </script>
+</body>
+</html>

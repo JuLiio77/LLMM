@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // Julio Vera Espejo
+
+
+    // En un blog, el slug de un post es la parte de la url que se crea a partir del título del post. Por ejemplo, en la web www.aprendojs.com, a partir del post con título “Como usar Strings en Javascript” se crearía la url:
+
+    // https://www.aprendojs.com/como-usar-strings-en-javascript
+
+    // Escribir una función que reciba el nombre del post y devuelva el slug de esta forma:
+
+    // Pasar a minúsculas el título.
+    // Unir todas las palabras del post con guiones.
+    // Tiene que aparecer en otra línea el número de caracteres que tiene nuestra url
+
+
+    function getPostSlug(titulo) {
+
+    //pasamos la frase a minuscula = como usar utrings en javascript
+    var palabras = titulo.toLowerCase().split(' ')
+
+    // aqui unimos las palabras con guiones = como-usar-strings-en-javascript
+    var guiones = palabras.join('-')
+
+    // Obtener longitud de la url
+    var urlLength = guiones.length
+
+    // Devolver slug y longitud de la url
+    return guiones + '\n' + urlLength
+    }
+
+    var frase = 'Como usar Strings en Javascript'
+    document.write(getPostSlug(frase))
+
+
+
+</script>
+</body>
+</html>
