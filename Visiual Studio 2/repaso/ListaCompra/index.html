@@ -7,6 +7,55 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Desordenada con Botón de Borrar</title>
+</head>
+<body>
+    <h1>Lista Desordenada</h1>
+    <ul id="lista">
+        <li>Elemento 1<button onclick="borrarElemento(this)">Borrar</button></li>
+        <li>Elemento 2<button onclick="borrarElemento(this)">Borrar</button></li>
+        <li>Elemento 3<button onclick="borrarElemento(this)">Borrar</button></li>
+        <li>Elemento 4<button onclick="borrarElemento(this)">Borrar</button></li>
+        <li>Elemento 5<button onclick="borrarElemento(this)">Borrar</button></li>
+    </ul>
+
+    <button onclick="recuperarUltimaFilaBorrada()">Recuperar Última Fila Borrada</button>
+
+    <script>
+        // Función para borrar un elemento de la lista
+function borrarElemento(btn) {
+    var li = btn.parentNode; // Obtenemos el elemento <li> padre del botón
+    li.parentNode.removeChild(li); // Borramos el elemento <li> de la lista
+}
+
+// Variable para almacenar la última fila borrada
+var ultimaFilaBorrada = null;
+
+// Función para recuperar la última fila borrada
+function recuperarUltimaFilaBorrada() {
+    var lista = document.getElementById("lista"); // Obtenemos la lista
+    var li = document.createElement("li"); // Creamos un nuevo elemento <li>
+    li.textContent = ultimaFilaBorrada; // Asignamos el contenido de la última fila borrada al nuevo <li>
+    li.innerHTML += '<button onclick="borrarElemento(this)">Borrar</button>'; // Agregamos un botón de borrar al nuevo <li>
+    lista.appendChild(li); // Agregamos el nuevo <li> a la lista
+    ultimaFilaBorrada = null; // Reiniciamos la variable de la última fila borrada
+}
+
+// Función para borrar un elemento de la lista y almacenar su contenido en la variable de la última fila borrada
+function borrarElemento(btn) {
+    var li = btn.parentNode; // Obtenemos el elemento <li> padre del botón
+    ultimaFilaBorrada = li.textContent; // Almacenamos el contenido del <li> en la variable de la última fila borrada
+    li.parentNode.removeChild(li); // Borramos el elemento <li> de la lista
+}
+
+    </script>
+</body>
+</html>
+
     
 </body>
 </html>
