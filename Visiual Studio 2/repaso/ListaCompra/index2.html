@@ -1,0 +1,55 @@
+<form id="formulario">
+  <input type="text" id="nuevo-elemento" placeholder="Escribe un elemento...">
+  <button type="submit">Agregar</button>
+</form>
+<ul id="mi-lista"></ul>
+<button id="boton-recuperar">Recuperar</button>
+
+<script>
+  const formulario = document.querySelector('#formulario');
+  const nuevoElemento = document.querySelector('#nuevo-elemento');
+  const lista = document.querySelector('#mi-lista');
+  const botonRecuperar = document.querySelector('#boton-recuperar');
+
+  const palabrasBorradas = [];
+
+  formulario.addEventListener('submit', (event) => { 
+    event.preventDefault();
+
+    const elemento = document.createElement('li');
+    elemento.textContent = nuevoElemento.value;
+
+    const botonBorrar = document.createElement('button');
+    botonBorrar.textContent = 'Borrar';
+
+    botonBorrar.addEventListener('click', () => {
+      elemento.remove();
+      palabrasBorradas.push(elemento.textContent);
+    });
+
+    elemento.appendChild(botonBorrar);
+    lista.appendChild(elemento);
+
+    nuevoElemento.value = '';
+  });
+
+  botonRecuperar.addEventListener('click', () => {
+    if (palabrasBorradas.length > 0) {
+      const palabraRecuperada = palabrasBorradas.pop();
+      const elementoRecuperado = document.createElement('li');
+      elementoRecuperado.textContent = palabraRecuperada;
+      
+      const botonBorrarRecuperado = document.createElement('button');
+      botonBorrarRecuperado.textContent = 'Borrar';
+      
+      botonBorrarRecuperado.addEventListener('click', () => {
+        elementoRecuperado.remove();
+        palabrasBorradas.push(elementoRecuperado.textContent);
+      });
+      
+      elementoRecuperado.appendChild(botonBorrarRecuperado);
+      lista.appendChild(elementoRecuperado);
+    }
+  });
+
+</script>

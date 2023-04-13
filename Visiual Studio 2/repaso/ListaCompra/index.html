@@ -8,54 +8,47 @@
 </head>
 <body>
 
-    <!DOCTYPE html>
-<html>
-<head>
-    <title>Lista Desordenada con Botón de Borrar</title>
-</head>
-<body>
-    <h1>Lista Desordenada</h1>
-    <ul id="lista">
-        <li>Elemento 1<button onclick="borrarElemento(this)">Borrar</button></li>
-        <li>Elemento 2<button onclick="borrarElemento(this)">Borrar</button></li>
-        <li>Elemento 3<button onclick="borrarElemento(this)">Borrar</button></li>
-        <li>Elemento 4<button onclick="borrarElemento(this)">Borrar</button></li>
-        <li>Elemento 5<button onclick="borrarElemento(this)">Borrar</button></li>
-    </ul>
+<h1>Lista de la compra</h1>
 
-    <button onclick="recuperarUltimaFilaBorrada()">Recuperar Última Fila Borrada</button>
+<form id="formulario">
+   <input type="text" id="nuevo-elemento" placeholder="Escribe un elemento...">
+   <button type="submit">Agregar</button>
+</form>
 
-    <script>
-        // Función para borrar un elemento de la lista
-function borrarElemento(btn) {
-    var li = btn.parentNode; // Obtenemos el elemento <li> padre del botón
-    li.parentNode.removeChild(li); // Borramos el elemento <li> de la lista
-}
+   <ul id="mi-lista"></ul>
 
-// Variable para almacenar la última fila borrada
-var ultimaFilaBorrada = null;
+   <button type="submit">Recuperar elemento borrado</button>
 
-// Función para recuperar la última fila borrada
-function recuperarUltimaFilaBorrada() {
-    var lista = document.getElementById("lista"); // Obtenemos la lista
-    var li = document.createElement("li"); // Creamos un nuevo elemento <li>
-    li.textContent = ultimaFilaBorrada; // Asignamos el contenido de la última fila borrada al nuevo <li>
-    li.innerHTML += '<button onclick="borrarElemento(this)">Borrar</button>'; // Agregamos un botón de borrar al nuevo <li>
-    lista.appendChild(li); // Agregamos el nuevo <li> a la lista
-    ultimaFilaBorrada = null; // Reiniciamos la variable de la última fila borrada
-}
+<script>
+   // seleccionamos el formulario y el input que se utiliza para agregar nuevos elementos a la lista, y la lista donde se mostrarán los elementos de la lista
+   const formulario = document.querySelector('#formulario');
+   const nuevoElemento = document.querySelector('#nuevo-elemento');
+   const lista = document.querySelector('#mi-lista');
 
-// Función para borrar un elemento de la lista y almacenar su contenido en la variable de la última fila borrada
-function borrarElemento(btn) {
-    var li = btn.parentNode; // Obtenemos el elemento <li> padre del botón
-    ultimaFilaBorrada = li.textContent; // Almacenamos el contenido del <li> en la variable de la última fila borrada
-    li.parentNode.removeChild(li); // Borramos el elemento <li> de la lista
-}
+   // Agregamos un event listener para el evento 'submit' del formulario
+   formulario.addEventListener('submit', (event) => { 
+      event.preventDefault();
+      
+      // Creamos un nuevo elemento de lista y un botón de borrar para cada elemento que se agregue a la lista
+      const elemento = document.createElement('li');
+      elemento.textContent = nuevoElemento.value;
 
-    </script>
-</body>
-</html>
+      const botonBorrar = document.createElement('button'); // Crea un elemento de botón
+      botonBorrar.textContent = 'Borrar'; // Asigna el texto 'Borrar' al botón
+      
+      // Agregamos un event listener para el evento click del botón de borrar:
+      botonBorrar.addEventListener('click', () => { // Agrega un evento de clic al botón
+            elemento.remove(); // Remueve el elemento de la lista al hacer clic en el botón
+      });
 
-    
+      elemento.appendChild(botonBorrar); // Agrega el botón como hijo del elemento de la lista
+      lista.appendChild(elemento);
+      
+      nuevoElemento.value = '';
+   })
+   
+   
+</script>
+
 </body>
 </html>
