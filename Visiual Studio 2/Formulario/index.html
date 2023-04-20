@@ -10,28 +10,28 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 order-md-1">
+            <div class="col-md-10 order-md-1">
 
-                <h4 class="mb-3">Formulario de reserva</h4>
+                <h2 class="mb-12">Formulario de reserva</h2>
 
                 <form id="reservation-form" class="needs-validation" novalidate>
                     <div class="row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6">
                             <label for="nombre">Nombre</label>
                             <input type="text" class="form-control" id="nombre" placeholder="" value="" required>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6">
                             <label for="apellidos">Apellidos</label>
                             <input type="text" class="form-control" id="apellidos" placeholder="" value="" required>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6">
                             <label for="dni">DNI</label>
                             <input type="text" class="form-control" id="dni" placeholder="" value="" required>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control" id="edad" placeholder="" value="" required>
                         </div>
@@ -66,15 +66,25 @@
             if (!nombre || !apellidos || !dni || !edad ) {
                 alert('Por favor, complete todos los campos requeridos y acepte la protección de datos');
                 return false;
+
             }
+            var formato_dni = '/^[0-9]{8}[A-Za-z]$/'
+            if(!dni.match(formato_dni)){
+                alert('Introduce de nuevo tu DNI')
+            } 
+    
+            
             if(!btnAceptar){
                 alert('Por favor, Acepte la condicion de datos para enviar')
                 return false
             }
 
-            // Si se llega aquí, el formulario es válido
+             if(nombre == true || apellidos == true|| formato_dni == true || edad == true){
             alert('¡Formulario enviado correctamente!');
             form.reset();
+             }else{
+                alert('Faltan campos por rellenar')
+             }
         });
     </script>
 </body>
