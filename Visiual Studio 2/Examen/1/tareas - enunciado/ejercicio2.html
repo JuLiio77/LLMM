@@ -1,0 +1,74 @@
+<!-- 2. Lista de tareas.
+A partir del codigo que se entrega, programar estas funcionalidades:
+A) Añadir una tarea con la estructura HTML que se ve en el código:
+<div class="task">
+<p> [aqui va el nombre de la tarea] </p>
+<span class="close">X</span>
+</div>
+
+VALORACION: 2 puntos
+
+B) Añadir la funcionalidad de borrar tarea, de tal forma que haciendo click en
+la X, desaparezca de la lista ese elemento. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="board">
+            <div class="add">
+                <input type="text"><a href="#" class="btn">Añadir Tarea</a>
+            </div>
+            <div class="todo">
+                <h4>TAREAS PENDIENTES</h4>
+                <div class="tasks">
+                    <div class="task">
+                        <p>Tarea I</p>
+						<span class="close">X</span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <script>const input = document.querySelector('input');
+        const addBtn = document.querySelector('.add .btn');
+        const tasks = document.querySelector('.tasks');
+        
+        // Función para añadir una nueva tarea
+        function addTask() {
+          if (input.value !== '') {
+            const task = document.createElement('div');
+            task.classList.add('task');
+            task.innerHTML = `<p>${input.value}</p><span class="close">X</span>`;
+            tasks.appendChild(task);
+            input.value = '';
+            task.querySelector('.close').addEventListener('click', () => {
+              task.remove();
+            });
+          }
+        }
+        
+        // Event listener para el botón de añadir tarea
+        addBtn.addEventListener('click', addTask);
+        
+        // Event listener para la tecla Enter en el input de texto
+        input.addEventListener('keyup', event => {
+          if (event.key === 'Enter') {
+            addTask();
+          }
+        });
+        </script>
+
+        <!-- La primera parte del código selecciona los elementos HTML que se van a utilizar en el script y los almacena en variables. Luego se define la función addTask que crea un nuevo elemento de tarea si el valor del input no está vacío, lo añade a la lista y agrega un event listener al botón de cerrar para eliminar la tarea de la lista al hacer clic en la "X". Por último, se agregan los event listeners al botón de añadir tarea y al input de texto para detectar la pulsación de Enter y llamar a la función addTask. -->
+</body>
+
+</html>

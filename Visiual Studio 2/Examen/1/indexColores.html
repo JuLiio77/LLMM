@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Ejercicio 1</title>
+</head>
+<body>
+
+<a name="list">Una lista de enlaces:</a>
+<ul>
+  <li><a href="http://google.com">http://google.com</a></li>
+  <li><a href="/tutorial">/tutorial.html</a></li>
+  <li><a href="local/path">local/path</a></li>
+  <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+  <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+  <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+</ul>
+
+<script>
+// Seleccionamos todos los enlaces de la página
+let links = document.getElementsByTagName('a');
+
+// Recorremos todos los enlaces
+for (let i = 0; i < links.length; i++) {
+  let link = links[i];
+
+  // Si el enlace es externo, le agregamos el estilo de color naranja
+  if (link.href.includes('://') && !link.href.startsWith('http://internal.com')) {
+    link.style.color = 'orange';
+  }
+}
+</script>
+
+</body>
+</html>

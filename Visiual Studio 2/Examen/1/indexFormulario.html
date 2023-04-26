@@ -1,0 +1,149 @@
+<!-- Formulario de alta de usuario.
+Realizar los siguientes apartados sobre el formulario que se entrega:
+A) Rellenar las opciones del select desplegable a partir de los valores que
+contiene la variable provincias.
+
+VALORACION: 1 punto
+B) Validar el formulario y mostrar mensaje de confirmación en un alert de
+bootstrap.
+● Todos los campos son requeridos.
+● Los valores de los campos password y confirmPassword deben
+coincidir.
+● Cuando se envie el formulario una vez validado correctamente,
+aparecerá un alert de bootstrap cuyo código HTML es:
+<div class="alert alert-success">El usuario se registró correctamente</div>
+VALORACION: 2 puntos
+C) El botón de envío del formulario deberá permanecer desactivado mientras
+hayan fallos de validación. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Validacion Formulario JS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" crossorigin="anonymous">
+
+  </head>
+<body>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6 border">  
+          <h1>Alta de Usuario</h1>
+        <form id="registrationForm" action="">
+          <div class="form-group row">
+            <div class="col-4">
+              <label for="provincias">Provincia:</label>
+              <select class="form-control" id="provincias">
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+                <label for="username">Usuario: </label>
+                <input id="username" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+                <label for="password">Contraseña: </label>
+                <input id="password" type="password" class="form-control">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+                <label for="confirmPassword">Confirma Contraseña: </label>
+                <input id="confirmPassword" type="password" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-block">
+                  Registrarse
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+<script>
+
+    // EJERCICIO A
+    var provincias={"01":"ALMERIA","02":"CADIZ","03":"CORDOBA","04":"GRANADA","05":"HUELVA","06":"JAEN","07":"MALAGA","08":"SEVILLA",};
+    
+
+    var provincias = {"01":"ALMERIA","02":"CADIZ","03":"CORDOBA","04":"GRANADA","05":"HUELVA","06":"JAEN","07":"MALAGA","08":"SEVILLA"};
+
+    var selectProvincias = document.getElementById("provincias");
+
+    for (var key in provincias) {
+    var option = document.createElement("option");
+    option.value = key;
+    option.text = provincias[key];
+    selectProvincias.add(option);
+    }
+
+    //  Este código crea una variable llamada provincias que contiene un objeto con los códigos y nombres de las provincias. Luego, se obtiene el elemento select con document.getElementById("provincias") y se recorre el objeto provincias con un bucle for-in para crear una opción para cada provincia y añadirla al select. Para cada opción se crea un elemento option con document.createElement("option"), se establece su valor y texto con los códigos y nombres de las provincias, y se añade al select con selectProvincias.add(option).
+
+    var registrationForm = document.getElementById("registrationForm").value
+var usernameInput = document.getElementById("username").value
+var passwordInput = document.getElementById("password").value
+var confirmPasswordInput = document.getElementById("confirmPassword").value
+var submitButton = document.querySelector("button[type='submit']").checked
+
+submitButton.disabled = true;
+
+registrationForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  var hasError = false;
+  var errorMessage = "";
+
+  if (usernameInput.value === "" || passwordInput.value === "" || confirmPasswordInput.value === "") {
+    hasError = true;
+    errorMessage += "Todos los campos son requeridos.\n";
+  }
+
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    hasError = true;
+    errorMessage += "Los valores de los campos password y confirmPassword deben coincidir.\n";
+  }
+
+  if (hasError) {
+    alert(errorMessage);
+  } else {
+    var alertElement = document.createElement("div");
+    alertElement.className = "alert alert-success";
+    alertElement.innerText = "El usuario se registró correctamente";
+    document.body.appendChild(alertElement);
+    registrationForm.reset();
+  }
+});
+
+usernameInput.addEventListener("input", validateForm);
+passwordInput.addEventListener("input", validateForm);
+confirmPasswordInput.addEventListener("input", validateForm);
+
+function validateForm() {
+  if (usernameInput.value !== "" && passwordInput.value !== "" && confirmPasswordInput.value !== "" && passwordInput.value === confirmPasswordInput.value) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
+}
+
+    // Este código añade un listener al evento "submit" del formulario para validar los campos y mostrar un mensaje de confirmación o de error. También añade listeners a los campos de usuario, contraseña y confirmación de contraseña para habilitar o deshabilitar el botón de envío del formulario según se cumplan o no las condiciones de validación.
+
+    // Cuando se produce el evento "submit", se evita el comportamiento por defecto del formulario con event.preventDefault() y se comprueban los campos de usuario, contraseña y confirmación de contraseña con un conjunto de if. Si hay algún error, se establece hasError a true y se añade un mensaje de error a errorMessage. Si no hay errores, se crea un elemento
+
+
+
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!-- ENUNCIADO DEL EJERCICIO: Usando al menos la función createElement insertar en el div un elemento
+imagen que muestre la imagen de la url de la variable imageUrl. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Wiki</title>
+    <style>
+        #header{
+            border:2px solid blue;
+            min-height: 165px;
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        const imageUrl = 'https://es.wikipedia.org/static/images/project-logos/eswiki.png';
+        
+        // Crear un elemento img
+        const imagen = document.createElement('img');
+        
+        // Establecer el atributo src de la imagen
+        imagen.src = imageUrl;
+        
+        // Agregar la imagen al div
+        const header = document.getElementById('header');
+        header.appendChild(imagen);
+    </script>
+
+
+<!-- Claro, para insertar la imagen en el div con id="header", puedes usar la función createElement() para crear un elemento img, establecer su atributo src con la URL almacenada en la variable imageUrl, y luego agregar el elemento de imagen al div con appendChild(). -->
+
+
+<!-- Este código creará un elemento img con la URL de la imagen almacenada en la variable imageUrl y lo insertará dentro del div con id="header". Verás la imagen de Wikipedia en el centro del borde azul del div. -->
+
+
+
+
+</body>
+</html>

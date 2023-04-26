@@ -1,0 +1,89 @@
+
+<!--ENUNCIADO DEL EJERCICIO 2. Lista de tareas.
+A partir del código que se entrega, programar estas funcionalidades:
+A) Cuando se haga click sobre un elemento, deberá aparecer destacado,
+añadiéndole la clase active.
+
+VALORACION: 1 puntos
+B) Añadir una tarea: cuando se le haga click al botón AddItem con el valor
+que contenga el input. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulando Listas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body { padding-top: 10px; font-size: 1.4em; }
+        ul { list-style: none; }
+        li { padding: 5px; cursor: pointer; }
+        .active {
+            background-color: #4299e1;
+            color: white;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list">
+                    <li class="active">This is the first item of the first list.</li>
+                    <li>This is the second item of the first list.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="new-item-text">
+                </div>
+                <button onclick="addItem();">Add Item</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Ejercicio A
+        // Seleccionar todos los elementos li de la lista y agregarles un evento 'click'
+        const items = document.querySelectorAll('.list li');
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remover la clase 'active' de todos los elementos li de la lista
+                items.forEach(item => item.classList.remove('active'));
+                // Agregar la clase 'active' al elemento li que ha sido clickeado
+                item.classList.add('active');
+            });
+        });
+
+        // Ejercicio B
+        // Obtener el botón y el input
+        const addButton = document.querySelector('button');
+        const input = document.querySelector('#new-item-text');
+
+        function addItem() {
+            // Obtener el valor del input
+            const newItemText = input.value;
+            // Crear un nuevo elemento li con el valor del input
+            const newItem = document.createElement('li');
+            newItem.innerText = newItemText;
+            // Agregar el nuevo elemento li a la lista
+            const list = document.querySelector('.list');
+            list.appendChild(newItem);
+            // Limpiar el valor del input
+            input.value = '';
+        }
+    </script>
+
+    <!-- El Ejercicio A corresponde a la selección de los elementos li y la adición de la clase 'active' al elemento que ha sido clickeado.
+
+    El Ejercicio B corresponde a la adición de una nueva tarea a la lista, que se activa cuando se hace clic en el botón Add Item con el valor que contiene el input. -->
+
+</body>
+</html>
