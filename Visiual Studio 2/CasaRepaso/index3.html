@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>.acordeon .parrafo p {
+    display: none;
+  }
+  </style>
+<body>
+    <div class="acordeon">
+        <div class="parrafo">
+          <h2>Parrafo 1</h2>
+          <p>Contenido del parrafo 1</p>
+          <button class="boton">Ocultar contenido</button>
+        </div>
+        <div class="parrafo">
+          <h2>Parrafo 2</h2>
+          <p>Contenido del parrafo 2</p>
+          <button class="boton">Ocultar contenido</button>
+        </div>
+        <div class="parrafo">
+          <h2>Parrafo 3</h2>
+          <p>Contenido del parrafo 3</p>
+          <button class="boton">Ocultar contenido</button>
+        </div>
+      </div>
+      
+      <script>
+      
+      var botones = document.querySelectorAll('.acordeon .boton');
+
+        for (var i = 0; i < botones.length; i++) {
+          botones[i].addEventListener('click', function() {
+            var parrafo = this.parentNode;
+            var contenido = parrafo.querySelector('p');
+            var mensaje = parrafo.querySelector('.mensaje');
+        
+            if (parrafo.classList.contains('abierto')) {
+              contenido.style.display = 'none';
+              mensaje.textContent = 'Mostrar contenido';
+            } else {
+              contenido.style.display = 'block';
+              mensaje.textContent = 'Ocultar contenido';
+            }
+        
+            parrafo.classList.toggle('abierto');
+          });
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mi-parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
+        <br>
+        <span id="texto-oculto" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. </span>
+      </p>
+      
+      <a href="#" id="boton-mostrar" onclick="mostrarTexto()">Mostrar más</a>
+
+      <script>
+        function mostrarTexto() {
+        var span = document.getElementById("texto-oculto");
+        var boton = document.getElementById("boton-mostrar");
+
+        if (span.style.display === "none") {
+            span.style.display = "inline";
+            boton.textContent = "Mostrar menos";
+        } else {
+            span.style.display = "none";
+            boton.textContent = "Mostrar más";
+        }
+        }
+
+      </script>
+      
+</body>
+</html>
