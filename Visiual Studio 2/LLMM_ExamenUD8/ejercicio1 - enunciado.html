@@ -1,0 +1,36 @@
+<!-- Julio Vera Espejo -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Wiki</title>
+    <style>
+        #header{
+            border:2px solid blue;
+            min-height: 165px;
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        const imageUrl = 'https://es.wikipedia.org/static/images/project-logos/eswiki.png';
+
+        //aqui creamos un elemento img
+        const imagen = document.createElement('img')
+
+        //Establecemos el atributo src de la imagen
+        imagen.src = imageUrl
+
+        //Aqui por ultimo agregamos la imagen al div
+        const header = document.getElementById('header')
+        header.appendChild(imagen)
+        
+    </script>
+</body>
+</html>

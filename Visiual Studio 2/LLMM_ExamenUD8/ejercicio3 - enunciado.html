@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Validacion Formulario JS</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6 border">  
+      <h1>Alta de Usuario</h1>
+      <form id="registrationForm" action="">
+        
+        <div class="form-group row">
+          <div class="col">
+            <label for="username">Usuario: </label>
+            <input id="username" type="text" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col">
+            <label for="password">Contraseña: </label>
+            <input id="password" type="password" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col">
+            <label for="confirmPassword">Confirma Contraseña: </label>
+            <input id="confirmPassword" type="password" class="form-control" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-primary btn-block" id="btnAceptar" type="submit">Registrarse</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script>
+  const form = document.querySelector('#registrationForm');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+    const confirmPassword = document.querySelector('#confirmPassword').value;
+
+    //Confirmamos que cada campo debe estar relleno
+    if (!username) {
+      alert('El nombre de usuario es obligatorio');
+      return;
+    }
+
+    if (!password) {
+      alert('La contraseña es obligatoria');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert('Las contraseñas no coinciden');
+      return;
+    }
+
+    //Aqui validamos que el nombre debe de ser un correo electronico
+    const email = /^\S+@\S+\.\S+$/;
+    if (!email.test(username)) {
+      alert('El nombre de usuario debe ser una dirección de correo electrónico válida');
+      return;
+    }
+
+    //Enviamos el formulario y si todo esta correctamente se resetea
+    alert('El usuario se registró correctamente');
+    form.reset();
+  });
+</script>
+</body>
+</html>
